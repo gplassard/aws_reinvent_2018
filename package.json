@@ -16,7 +16,8 @@
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
     "parse": "node parse.js",
-    "deploy": "npm run build && gh-pages -d build"
+    "deploy": "npm run build && gh-pages -d build",
+    "scrap": "node puppeteer.js"
   },
   "devDependencies": {
     "@types/jest": "^23.3.3",
@@ -27,6 +28,7 @@
     "@types/react-select": "^2.0.4",
     "cheerio": "^1.0.0-rc.2",
     "gh-pages": "^2.0.1",
+    "puppeteer": "^1.9.0",
     "typescript": "^3.1.1"
   },
   "homepage": "https://gplassard.github.io/aws_reinvent/"
