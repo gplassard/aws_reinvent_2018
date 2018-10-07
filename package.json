@@ -12,7 +12,7 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "parse": "node src/parse.js"
+    "parse": "node parse.js"
   },
   "devDependencies": {
     "@types/jest": "^23.3.3",

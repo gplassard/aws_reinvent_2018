@@ -19,7 +19,4 @@ fs.readdirSync("sessions").forEach(fileName => {
     })
 })
 
-sessions.length//?
-
-
-fs.writeFileSync('sessions_json/all.json', JSON.stringify(sessions, null, 4))
+fs.writeFileSync('src/sessions.json', JSON.stringify(sessions, null, 4))
