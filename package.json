@@ -1,0 +1,11 @@
+{
+  "name": "reinvent",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node src/parse.js"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2"
+  }
+}
