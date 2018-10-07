@@ -2616,7 +2616,7 @@
         "abstract": "In this workshop, we introduce one of the most engaging features of the Amazon Sumerian service: Sumerian Hosts. Hosts are animated, interactive, digital avatars that can be... View More",
         "type": "Workshop",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_23028",
@@ -2625,7 +2625,7 @@
         "abstract": "Stephen Schmidt, Chief Information Security Officer at AWS, addresses the current state of security in the cloud, with a particular focus on feature updates, the AWS internal... View More",
         "type": "Session",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_89659",
@@ -2634,7 +2634,7 @@
         "abstract": "In this introductory chalk talk, we cover how to secure your resources in the cloud for common AWS workloads such as Amazon EC2 computing, database, and serverless. We cover... View More",
         "type": "Chalk Talk",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_91027",
@@ -2643,7 +2643,7 @@
         "abstract": "This workshop enables customers to work with the AWS IoT Analytics service. Participants learn to configure AWS IoT Analytics as well as ingest, explore, and visualize the... View More",
         "type": "Workshop",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_89103",
@@ -2652,7 +2652,7 @@
         "abstract": "Customers that are modernizing a traditional monolithic application with containers are attracted to services like Amazon ECS, AWS Fargate, and Amazon EKS. By re-architecting... View More",
         "type": "Chalk Talk",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_89794",
@@ -2661,7 +2661,7 @@
         "abstract": "In this session, learn how to build a data driven, serverless calorie tracker application with real-time, offline, and data syncing capabilities. The application provides an... View More",
         "type": "Workshop",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_88695",
@@ -2670,7 +2670,7 @@
         "abstract": "In the novel, “The Hitchhiker's Guide to the Galaxy,” Douglas Adams described a Babel fish as a “small, yellow, and leech-like” device that you stick in your ear. In Star... View More",
         "type": "Workshop",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_89824",
@@ -2679,7 +2679,7 @@
         "abstract": "Cloud technologies are helping organizations transform their businesses, and with no signs of cloud adoption slowing down any time soon, employees with the necessary cloud... View More",
         "type": "Chalk Talk",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_88727",
@@ -2688,7 +2688,7 @@
         "abstract": "XGBoost makes applying machine learning (ML) to real-world scenarios easy and powerful. Amazon SageMaker has XGBoost built in, and this enables the transition of ML models... View More",
         "type": "Chalk Talk",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_23032",
@@ -2697,7 +2697,7 @@
         "abstract": "In this session, learn how Careem migrated from using ad hoc secrets management solutions to AWS Secrets Manager. Learn how Careem simplified secrets management, empowering... View More",
         "type": "Session",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_90823",
@@ -2706,7 +2706,7 @@
         "abstract": "Learn how to build applications to process highly connected data by working backwards from your questions to your graph data model.",
         "type": "Chalk Talk",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_88744",
@@ -2715,7 +2715,7 @@
         "abstract": "In the world of sports entertainment, the fast pace of live events makes it difficult to keep up with new records and highlights that occur during games. In this session,... View More",
         "type": "Chalk Talk",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_89887",
@@ -2724,7 +2724,7 @@
         "abstract": "Alexa for Business brings a conversational UI to help you simplify your meeting room experience. In this session, learn how you can bring Alexa for Business to your meeting... View More",
         "type": "Session",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_90609",
@@ -2733,7 +2733,7 @@
         "abstract": "In this session, learn how to leverage the unique features of the Amazon Aurora platform to build faster, more scalable database applications optimized for the cloud. We... View More",
         "type": "Workshop",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_23116",
@@ -2742,7 +2742,7 @@
         "abstract": "In this session, get hands-on experience with live industrial devices, and learn how to deploy the AWS Industrial IoT reference solution to consume and analyze factory data... View More",
         "type": "Workshop",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_22933",
@@ -2751,7 +2751,7 @@
         "abstract": "As Amazon's consumer business continues to grow, so does the volume of data and the number and complexity of the analytics done in support of the business. In this session,... View More",
         "type": "Session",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_89683",
@@ -2760,7 +2760,7 @@
         "abstract": "In this session, we start by deploying a monolithic web app into an Amazon Lightsail instance. Next, we separate out the components and use technologies like load balancers... View More",
         "type": "Workshop",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_89834",
@@ -2769,7 +2769,7 @@
         "abstract": "Companies expecting speed and agility from cloud computing can find knowledge gaps that lead to slow and costly processes. AWS Enterprise Support can help customers with... View More",
         "type": "Chalk Talk",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_89205",
@@ -2778,7 +2778,7 @@
         "abstract": "DevOps and Data Science? How does that work? In software teams where innovation is a priority, DevOps can be an accelerator. In data science and machine learning, there are a... View More",
         "type": "Chalk Talk",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_89689",
@@ -2787,7 +2787,7 @@
         "abstract": "Enterprises are leveraging hybrid cloud architectures to accelerate their cloud migration journey and to adopt modern application strategies. VMware Cloud on AWS provides an... View More",
         "type": "Session",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_88746",
@@ -2796,7 +2796,7 @@
         "abstract": "Researchers from the University of Michigan and Georgia Tech, in collaboration with the AWS Research Initiative, have developed new techniques to identify financial market... View More",
         "type": "Chalk Talk",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_90083",
@@ -2805,7 +2805,7 @@
         "abstract": "Queries on Amazon Athena can be executed in a number of ways, which enables a broad range of use cases. In this session, learn how to use the Athena API and JDBC and ODBC... View More",
         "type": "Chalk Talk",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_22995",
@@ -2814,7 +2814,7 @@
         "abstract": "Activision Blizzard provides a real-time, immersive, second screen Alexa experience for Call of Duty WWII players in a first-to-market major title integration. In this... View More",
         "type": "Session",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_89802",
@@ -2823,7 +2823,7 @@
         "abstract": "To help manage the risk of downtime, AWS Support offers tools, such as Personal Health Dashboard (PHD) and Trusted Advisor (TA), that enable you to monitor your environments... View More",
         "type": "Workshop",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_88656",
@@ -2832,7 +2832,7 @@
         "abstract": "Imagine a future where virtual reality and augmented reality can be quickly and cost-effectively implemented by using the cloud to train operational field engineers to... View More",
         "type": "Chalk Talk",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_90047",
@@ -2841,7 +2841,7 @@
         "abstract": "We are a lean team consisting of developers, lead architects, business analysts, and a project manager. To scale our applications and optimize costs, we need to reduce the... View More",
         "type": "Session",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_89662",
@@ -2850,7 +2850,7 @@
         "abstract": "Bring your tricky questions and interesting use cases to this session, where we cover topics such as choosing the right load balancer, architectural best practices, load... View More",
         "type": "Chalk Talk",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_90159",
@@ -2859,7 +2859,7 @@
         "abstract": "Learn how Comcast addressed their data quality and system resiliency issues by using AWS technologies such as Amazon SQS, Amazon SNS, Amazon DynamoDB, Elasticsearch, and... View More",
         "type": "Chalk Talk",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_23057",
@@ -2868,7 +2868,7 @@
         "abstract": "How do you monitor and troubleshoot an application made up of many ephemeral, stateless functions? How do you debug a distributed application in production? In this talk, we... View More",
         "type": "Session",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_89902",
@@ -2877,7 +2877,7 @@
         "abstract": "Amazon WorkSpaces provides cloud desktops based on Amazon Linux 2. This help developers and office workers boost their productivity while providing secure data and access. In... View More",
         "type": "Workshop",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_90606",
@@ -2886,7 +2886,7 @@
         "abstract": "Organizations often have disparate datasets and find it challenging to replicate and analyze the data to drive positive business outcomes. This workshop leverages AWS managed... View More",
         "type": "Workshop",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_89704",
@@ -2895,7 +2895,7 @@
         "abstract": "Containers help you package your code so it can reliably run anywhere. However, deploying containers in the cloud can be complex and requires you to set up and manage... View More",
         "type": "Chalk Talk",
         "day": "monday",
-        "hotel": "belagio"
+        "hotel": "bellagio"
     },
     {
         "id": "session_88806",

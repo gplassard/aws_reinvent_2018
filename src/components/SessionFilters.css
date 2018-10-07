@@ -1,0 +1,7 @@
+.SessionFilters{
+    display: flex;
+}
+
+.SessionFilters>*{
+    min-width: 300px;
+}
