@@ -5,6 +5,8 @@ import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import * as React from 'react';
+import SessionComp from "./SessionComp";
+import './Sessions.css'
 
 interface Props {
     sessions: Session[]
@@ -17,26 +19,18 @@ interface State {
 export default class Sessions extends React.Component<Props, State> {
 
     public render() {
-        return (<Table>
+        return (<Table className="Sessions">
             <TableHead>
           <TableRow>
-            <TableCell>Jour</TableCell>
-            <TableCell >Hôtel</TableCell>
-            <TableCell >Type</TableCell>
-            <TableCell >Titre</TableCell>
-            <TableCell >Résumé</TableCell>
+            <TableCell>Day</TableCell>
+            <TableCell>Hotel</TableCell>
+            <TableCell />
+            <TableCell>Title</TableCell>
+            <TableCell>Abstract</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-            {this.props.sessions.map(session => {
-                return <TableRow key={session.id}>
-                    <TableCell>{session.day}</TableCell>
-                    <TableCell>{session.hotel}</TableCell>
-                    <TableCell>{session.type}</TableCell>
-                    <TableCell>{session.abbr}{session.title}</TableCell>
-                    <TableCell>{session.abstract}</TableCell>
-                </TableRow>
-            })}
+            {this.props.sessions.map(session => <SessionComp key={session.id} session={session}/>)}
         </TableBody>
         </Table>)
     }

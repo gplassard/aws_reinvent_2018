@@ -1,0 +1,12 @@
+.Sessions .Introductory{
+    background-color: green;
+    color: white;
+}
+
+.Sessions .Advanced{
+    background-color: orange;
+}
+
+.Sessions .Expert{
+    background-color: red;
+}

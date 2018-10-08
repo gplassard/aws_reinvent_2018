@@ -25,6 +25,12 @@ class App extends React.Component<{sessions: Session[]}, {filteredSessions: Sess
       if (filters.types && filters.types.length && filters.types.indexOf(session.type) < 0) {
         return false;
       }
+      if (filters.levels && filters.levels.length && filters.levels.indexOf(session.level) < 0) {
+        return false;
+      }
+      if (filters.title && filters.title.length && !session.title.toLowerCase().includes(filters.title)) {
+        return false;
+      }
       return true;
     })
 

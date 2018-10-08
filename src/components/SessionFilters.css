@@ -1,7 +1,13 @@
 .SessionFilters{
     display: flex;
+    align-items: flex-end;
+    margin-top: -15px;
 }
 
 .SessionFilters>*{
     min-width: 300px;
+}
+
+.SessionFilters .textField {
+    margin-bottom: 0;
 }

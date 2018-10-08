@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Filters, Session} from '../model';
 import Chip from "@material-ui/core/Chip";
+import TextField from "@material-ui/core/TextField";
 import Select from 'react-select';
 import * as _ from "lodash";
 import "./SessionFilters.css"
@@ -25,6 +26,7 @@ class SessionFilters extends React.Component<Props, State> {
                 days: [],
                 hotels: [],
                 types: [],
+                levels: [],
                 title: null,
                 description: null
             }
@@ -37,7 +39,15 @@ class SessionFilters extends React.Component<Props, State> {
             this.props.onFiltersChange(this.state.filters);
             return prev;
         })
-        
+    }
+
+    private onTitleChange = (e: any) => {
+        const value = e.target.value;
+        this.setState(prev => {
+            prev.filters.title = value.toLowerCase();
+            this.props.onFiltersChange(this.state.filters);
+            return prev;
+        })
     }
 
     public render() {
@@ -61,6 +71,19 @@ class SessionFilters extends React.Component<Props, State> {
             onChange={this.onFilterChange('types')}
             options={_.uniq(this.props.sessions.map(s => s.type)).map(s => ({label: s, value: s})) }
           />
+        <Select
+            placeholder="Choose a session level"
+            isMulti={true}
+            onChange={this.onFilterChange('levels')}
+            options={_.uniq(this.props.sessions.map(s => s.level)).map(s => ({label: s, value: s})) }
+          />
+        <TextField
+          className="textField"
+          label="Filter by title"
+          placeholder="DynamoDB"
+          margin="normal"
+          onChange={this.onTitleChange}
+        />
           <Chip label={ this.props.count + ' sessions'} color="primary"/>
           </div>)
     }
