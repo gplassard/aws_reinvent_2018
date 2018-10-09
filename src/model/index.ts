@@ -17,5 +17,6 @@ export interface Filters {
     types: string[];
     levels: string[];
     title: string | null;
+    favorites: boolean;
     description: string | null;
 }

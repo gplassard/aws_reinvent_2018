@@ -2,6 +2,8 @@ import * as React from 'react';
 import {Filters, Session} from '../model';
 import Chip from "@material-ui/core/Chip";
 import TextField from "@material-ui/core/TextField";
+import Switch from "@material-ui/core/Switch";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Select from 'react-select';
 import * as _ from "lodash";
 import "./SessionFilters.css"
@@ -28,6 +30,7 @@ class SessionFilters extends React.Component<Props, State> {
                 types: [],
                 levels: [],
                 title: null,
+                favorites: false,
                 description: null
             }
         }
@@ -45,6 +48,15 @@ class SessionFilters extends React.Component<Props, State> {
         const value = e.target.value;
         this.setState(prev => {
             prev.filters.title = value.toLowerCase();
+            this.props.onFiltersChange(this.state.filters);
+            return prev;
+        })
+    }
+
+    private onFavoritesChange = (e: any) => {
+        const value = e.target.checked;
+        this.setState(prev => {
+            prev.filters.favorites = value;
             this.props.onFiltersChange(this.state.filters);
             return prev;
         })
@@ -84,6 +96,14 @@ class SessionFilters extends React.Component<Props, State> {
           margin="normal"
           onChange={this.onTitleChange}
         />
+         <FormControlLabel
+            className="switchField"
+            control= {
+            <Switch
+              onChange={this.onFavoritesChange}
+              value="checkedA"
+            />
+         } label="Favorites"/>
           <Chip label={ this.props.count + ' sessions'} color="primary"/>
           </div>)
     }

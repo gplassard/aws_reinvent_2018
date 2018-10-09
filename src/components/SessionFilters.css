@@ -5,9 +5,13 @@
 }
 
 .SessionFilters>*{
-    min-width: 300px;
+    min-width: 250px;
 }
 
 .SessionFilters .textField {
     margin-bottom: 0;
+}
+
+.SessionFilters .switchField {
+    margin-bottom: -10px;
 }

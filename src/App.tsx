@@ -4,13 +4,23 @@ import SessionFilters from './components/SessionFilters';
 import Sessions from './components/Sessions';
 import { Filters, Session } from './model';
 
-class App extends React.Component<{sessions: Session[]}, {filteredSessions: Session[]}> {
+class App extends React.Component<{sessions: Session[]}, {filteredSessions: Session[], favorites: {[id: string]: boolean}}> {
 
   constructor(props: any) {
     super(props);
     this.state = {
-      filteredSessions: this.props.sessions
+      filteredSessions: this.props.sessions,
+      favorites: JSON.parse(localStorage.getItem('favorites') || '{}')
     };
+  }
+
+  
+  private onToggleFavorite = (id: string, isFavorite: boolean) => {
+    this.setState(prev => {
+        prev.favorites[id] = isFavorite;
+        localStorage.setItem('favorites', JSON.stringify(prev.favorites));
+        return prev;
+    })
   }
 
   private onFilterChange = (filters: Filters) => {
@@ -31,6 +41,9 @@ class App extends React.Component<{sessions: Session[]}, {filteredSessions: Sess
       if (filters.title && filters.title.length && !session.title.toLowerCase().includes(filters.title)) {
         return false;
       }
+      if (filters.favorites && !this.state.favorites[session.id]) {
+        return false;
+      }
       return true;
     })
 
@@ -41,7 +54,7 @@ class App extends React.Component<{sessions: Session[]}, {filteredSessions: Sess
     return (
       <React.Fragment>
           <SessionFilters sessions={this.props.sessions} onFiltersChange={this.onFilterChange} count={this.state.filteredSessions.length}/>
-          <Sessions sessions={this.state.filteredSessions}/>
+          <Sessions sessions={this.state.filteredSessions} favorites={this.state.favorites} onFavorite={this.onToggleFavorite}/>
       </React.Fragment>
     );
   }

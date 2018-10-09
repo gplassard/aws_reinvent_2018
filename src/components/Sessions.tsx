@@ -10,6 +10,8 @@ import './Sessions.css'
 
 interface Props {
     sessions: Session[]
+    onFavorite: (id: string, isFavorite: boolean) => any
+    favorites: {[id: string]: boolean}
 }
 
 interface State {
@@ -22,6 +24,7 @@ export default class Sessions extends React.Component<Props, State> {
         return (<Table className="Sessions">
             <TableHead>
           <TableRow>
+              <TableCell/>
             <TableCell>Day</TableCell>
             <TableCell>Hotel</TableCell>
             <TableCell />
@@ -30,7 +33,9 @@ export default class Sessions extends React.Component<Props, State> {
           </TableRow>
         </TableHead>
         <TableBody>
-            {this.props.sessions.map(session => <SessionComp key={session.id} session={session}/>)}
+            {this.props.sessions.map(session => 
+                <SessionComp key={session.id} session={session} favorite={this.props.favorites[session.id] || false} onFavorite={this.props.onFavorite}/>)
+            }
         </TableBody>
         </Table>)
     }
