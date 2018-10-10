@@ -2,16 +2,21 @@ import * as React from 'react';
 import './App.css';
 import SessionFilters from './components/SessionFilters';
 import Sessions from './components/Sessions';
-import { Filters, Session } from './model';
+import { Filters, Session, DEFAULT_FILTERS } from './model';
 
-class App extends React.Component<{sessions: Session[]}, {filteredSessions: Session[], favorites: {[id: string]: boolean}}> {
+class App extends React.Component<{sessions: Session[]}, {filteredSessions: Session[], favorites: {[id: string]: boolean}, deleted: {[id: string]: boolean}}> {
 
   constructor(props: any) {
     super(props);
     this.state = {
       filteredSessions: this.props.sessions,
-      favorites: JSON.parse(localStorage.getItem('favorites') || '{}')
+      favorites: JSON.parse(localStorage.getItem('favorites') || '{}'),
+      deleted: JSON.parse(localStorage.getItem('deleted') || '{}')
     };
+  }
+
+  public componentWillMount() {
+    this.onFilterChange(DEFAULT_FILTERS);
   }
 
   
@@ -19,6 +24,14 @@ class App extends React.Component<{sessions: Session[]}, {filteredSessions: Sess
     this.setState(prev => {
         prev.favorites[id] = isFavorite;
         localStorage.setItem('favorites', JSON.stringify(prev.favorites));
+        return prev;
+    })
+  }
+
+  private onToggleDelete = (id: string, isDelete: boolean) => {
+    this.setState(prev => {
+        prev.deleted[id] = isDelete;
+        localStorage.setItem('deleted', JSON.stringify(prev.deleted));
         return prev;
     })
   }
@@ -44,6 +57,9 @@ class App extends React.Component<{sessions: Session[]}, {filteredSessions: Sess
       if (filters.favorites && !this.state.favorites[session.id]) {
         return false;
       }
+      if (!filters.deletes && this.state.deleted[session.id]) {
+        return false;
+      }
       return true;
     })
 
@@ -54,7 +70,10 @@ class App extends React.Component<{sessions: Session[]}, {filteredSessions: Sess
     return (
       <React.Fragment>
           <SessionFilters sessions={this.props.sessions} onFiltersChange={this.onFilterChange} count={this.state.filteredSessions.length}/>
-          <Sessions sessions={this.state.filteredSessions} favorites={this.state.favorites} onFavorite={this.onToggleFavorite}/>
+          <Sessions sessions={this.state.filteredSessions} 
+          favorites={this.state.favorites} onFavorite={this.onToggleFavorite}
+          deleted={this.state.deleted} onDelete={this.onToggleDelete}
+          />
       </React.Fragment>
     );
   }

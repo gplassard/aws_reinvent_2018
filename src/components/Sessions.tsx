@@ -12,6 +12,8 @@ interface Props {
     sessions: Session[]
     onFavorite: (id: string, isFavorite: boolean) => any
     favorites: {[id: string]: boolean}
+    onDelete: (id: string, isDelete: boolean) => any
+    deleted: {[id: string]: boolean}
 }
 
 interface State {
@@ -34,7 +36,10 @@ export default class Sessions extends React.Component<Props, State> {
         </TableHead>
         <TableBody>
             {this.props.sessions.map(session => 
-                <SessionComp key={session.id} session={session} favorite={this.props.favorites[session.id] || false} onFavorite={this.props.onFavorite}/>)
+                <SessionComp key={session.id} session={session} 
+                favorite={this.props.favorites[session.id] || false} onFavorite={this.props.onFavorite}
+                deleted={this.props.deleted[session.id] || false} onDelete={this.props.onDelete}
+                />)
             }
         </TableBody>
         </Table>)

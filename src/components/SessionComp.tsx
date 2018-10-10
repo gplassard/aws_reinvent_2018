@@ -4,12 +4,14 @@ import TableRow from "@material-ui/core/TableRow";
 import * as React from 'react';
 import Chip from "@material-ui/core/Chip";
 import './Sessions.css'
-import { Star, StarBorder } from '@material-ui/icons';
+import { Star, StarBorder, Delete, DeleteOutline} from '@material-ui/icons';
 
 interface Props {
     session: Session
     favorite: boolean
+    deleted: boolean
     onFavorite: (id: string, isFavorite: boolean) => any
+    onDelete: (id: string, isDeleted: boolean) => any
 }
 
 interface State {
@@ -19,18 +21,23 @@ interface State {
 export default class SessionComp extends React.Component<Props, State> {
 
     public shouldComponentUpdate(nextProps: Props) {
-        return this.props.favorite !== nextProps.favorite;
+        return this.props.favorite !== nextProps.favorite || this.props.deleted !== nextProps.deleted;
     }
 
     private toggleFavorite = () => {
         this.props.onFavorite(this.props.session.id, !this.props.favorite);
     }
 
+    private toggleDelete = () => {
+        this.props.onDelete(this.props.session.id, !this.props.deleted);
+    }
+
     public render() {
         const session = this.props.session;
         return (<TableRow key={session.id}>
-        <TableCell onClick={this.toggleFavorite} className="clickable">     
-        {this.props.favorite ? <Star/> : <StarBorder  /> }
+        <TableCell>     
+        {this.props.favorite ? <Star onClick={this.toggleFavorite} className="clickable"/> : <StarBorder onClick={this.toggleFavorite} className="clickable"/> }
+        {this.props.deleted ? <Delete onClick={this.toggleDelete} className="clickable"/> : <DeleteOutline onClick={this.toggleDelete} className="clickable"/> }
         </TableCell>
         <TableCell>{session.times || session.day}</TableCell>
         <TableCell>{session.hotel}</TableCell>

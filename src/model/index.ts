@@ -18,5 +18,17 @@ export interface Filters {
     levels: string[];
     title: string | null;
     favorites: boolean;
+    deletes: boolean;
     description: string | null;
+}
+
+export const DEFAULT_FILTERS: Filters =  {
+    days: [],
+    hotels: [],
+    types: [],
+    levels: [],
+    title: null,
+    favorites: false,
+    deletes: false,
+    description: null
 }

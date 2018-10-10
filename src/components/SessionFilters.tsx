@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Filters, Session} from '../model';
+import {Filters, Session, DEFAULT_FILTERS} from '../model';
 import Chip from "@material-ui/core/Chip";
 import TextField from "@material-ui/core/TextField";
 import Switch from "@material-ui/core/Switch";
@@ -24,15 +24,7 @@ class SessionFilters extends React.Component<Props, State> {
     constructor(props: any) {
         super(props);
         this.state = {
-            filters: {
-                days: [],
-                hotels: [],
-                types: [],
-                levels: [],
-                title: null,
-                favorites: false,
-                description: null
-            }
+            filters: DEFAULT_FILTERS
         }
     }
 
@@ -57,6 +49,15 @@ class SessionFilters extends React.Component<Props, State> {
         const value = e.target.checked;
         this.setState(prev => {
             prev.filters.favorites = value;
+            this.props.onFiltersChange(this.state.filters);
+            return prev;
+        })
+    }
+    
+    private onDeleteChange = (e: any) => {
+        const value = e.target.checked;
+        this.setState(prev => {
+            prev.filters.deletes = value;
             this.props.onFiltersChange(this.state.filters);
             return prev;
         })
@@ -101,9 +102,15 @@ class SessionFilters extends React.Component<Props, State> {
             control= {
             <Switch
               onChange={this.onFavoritesChange}
-              value="checkedA"
             />
          } label="Favorites"/>
+        <FormControlLabel
+            className="switchField"
+            control= {
+            <Switch
+              onChange={this.onDeleteChange}
+            />
+         } label="Deleted"/>
           <Chip label={ this.props.count + ' sessions'} color="primary"/>
           </div>)
     }
