@@ -38,7 +38,7 @@ export default class SessionComp extends React.Component<Props, State> {
         <Chip label={ session.type} color="primary"/>
         <Chip label={ session.level} className={session.level}/>
         </TableCell>
-        <TableCell><b>{session.abbr}</b> {session.title}</TableCell>
+        <TableCell><a href={`https://www.portal.reinvent.awsevents.com/connect/search.ww?trk=typed_bookmarked#loadSearch-searchPhrase="${session.abbr}"&searchType=session`}>{session.abbr}</a> {session.title}</TableCell>
         <TableCell>{session.abstract}</TableCell>
     </TableRow>)
     }
