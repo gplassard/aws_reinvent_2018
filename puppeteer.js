@@ -75,6 +75,7 @@ const sleep = seconds =>
         const hotelId = hotel.id.replace('profileItem_728_', '')
         const levelId = level.id.replace('profileItem_10041_', '')
 
+        await page.goto(`https://google.fr`)
         await page.goto(`https://www.portal.reinvent.awsevents.com/connect/search.ww#loadSearch-searchPhrase=&searchType=session&tc=0&sortBy=daytime&dayID=${dayId}&p=&i(10041)=${levelId}&i(728)=${hotelId}`)
         console.log(`https://www.portal.reinvent.awsevents.com/connect/search.ww#loadSearch-searchPhrase=&searchType=session&tc=0&sortBy=daytime&dayID=${dayId}&p=&i(10041)=${levelId}&i(728)=${hotelId}`)
 
