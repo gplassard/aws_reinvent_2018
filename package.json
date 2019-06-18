@@ -1,5 +1,5 @@
 {
-  "name": "aws_reinvent",
+  "name": "aws_reinvent_2018",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -33,5 +33,5 @@
     "puppeteer": "^1.9.0",
     "typescript": "^3.1.1"
   },
-  "homepage": "https://gplassard.github.io/aws_reinvent/"
+  "homepage": "https://gplassard.github.io/aws_reinvent_2018/"
 }
