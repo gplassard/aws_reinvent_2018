@@ -23,7 +23,7 @@ interface State {
 export default class Sessions extends React.Component<Props, State> {
 
     public render() {
-        return (<Table className="Sessions">
+        return (<Table className="Sessions" size="small">
             <TableHead>
           <TableRow>
               <TableCell/>
