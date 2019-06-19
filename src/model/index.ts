@@ -9,6 +9,7 @@ export interface Session {
     level: string;
     rooms: string;
     times: string;
+    start: string;
 }
 
 export interface Filters {

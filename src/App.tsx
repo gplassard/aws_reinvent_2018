@@ -1,16 +1,27 @@
 import * as React from 'react';
+import * as _ from "lodash";
 import './App.css';
 import SessionFilters from './components/SessionFilters';
 import Sessions from './components/Sessions';
+import SchedulerComponent from './components/SchedulerComponent';
 import { Filters, Session, DEFAULT_FILTERS } from './model';
 
-class App extends React.Component<{sessions: Session[]}, {filteredSessions: Session[], favorites: {[id: string]: boolean}, deleted: {[id: string]: boolean}}> {
+interface State {
+  filteredSessions: Session[];
+  favoritesSessions: Session[];
+  favorites: {[id: string]: boolean};
+  deleted: {[id: string]: boolean};
+}
+
+class App extends React.Component<{sessions: Session[]}, State> {
 
   constructor(props: any) {
     super(props);
+    const favorites: {[id: string]: boolean} = JSON.parse(localStorage.getItem('favorites') || '{}');
     this.state = {
       filteredSessions: this.props.sessions,
-      favorites: JSON.parse(localStorage.getItem('favorites') || '{}'),
+      favoritesSessions: this.props.sessions.filter(s => favorites[s.id]),
+      favorites,
       deleted: JSON.parse(localStorage.getItem('deleted') || '{}')
     };
   }
@@ -22,9 +33,11 @@ class App extends React.Component<{sessions: Session[]}, {filteredSessions: Sess
   
   private onToggleFavorite = (id: string, isFavorite: boolean) => {
     this.setState(prev => {
-        prev.favorites[id] = isFavorite;
-        localStorage.setItem('favorites', JSON.stringify(prev.favorites));
-        return prev;
+        const favorites = prev.favorites;
+        favorites[id] = isFavorite;
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+        const favoritesSessions = this.props.sessions.filter(s => prev.favorites[s.id]);
+        return {favorites, favoritesSessions};
     })
   }
 
@@ -69,6 +82,9 @@ class App extends React.Component<{sessions: Session[]}, {filteredSessions: Sess
   public render() {
     return (
       <React.Fragment>
+          <SchedulerComponent 
+            sessions={this.props.sessions.slice(0,10)}    // FIXME
+            hotels={_.uniq(this.props.sessions.map(s => s.hotel).sort())} /> 
           <SessionFilters sessions={this.props.sessions} onFiltersChange={this.onFilterChange} count={this.state.filteredSessions.length}/>
           <Sessions sessions={this.state.filteredSessions} 
           favorites={this.state.favorites} onFavorite={this.onToggleFavorite}
